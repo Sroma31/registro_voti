@@ -8,8 +8,14 @@ class RegistroVoti:
         else:
             print("Voto non valido!")
 
+    def media(self) -> float:
+        if not self.voti:
+            return 0.0
+        return sum(self.voti) / len(self.voti)
+
 if __name__ == "__main__":
     registro = RegistroVoti()
     registro.aggiungi_voto(8.5)
     registro.aggiungi_voto(7.0)
     print("Voti inseriti:", registro.voti)
+    print("Media voti:", registro.media())
