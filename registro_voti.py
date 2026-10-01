@@ -13,9 +13,16 @@ class RegistroVoti:
             return 0.0
         return sum(self.voti) / len(self.voti)
 
-if __name__ == "__main__":
-    registro = RegistroVoti()
-    registro.aggiungi_voto(8.5)
-    registro.aggiungi_voto(7.0)
-    print("Voti inseriti:", registro.voti)
-    print("Media voti:", registro.media())
+    def esito(self) -> str:
+        media_voti = self.media()
+        if media_voti >= 6:
+            return "Promosso"
+        else:
+            return "Bocciato"
+        #i love niggers
+
+
+
+
+
+
